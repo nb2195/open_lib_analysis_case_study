@@ -153,6 +153,10 @@ class Solution():
         avg_number_of_pages_df = Solution.avg_number_of_pages(spark,filtered_inp)
         num_of_authors_published_at_least_one_book_per_year_df = Solution.num_of_authors_published_at_least_one_book_per_year(spark,filtered_inp)
         self.logger.warn('''metric calculation successful''')
+        
+        """
+        Post successful metric calculations the results can eb stored in Hive tables for end users to query and access the data
+        """
 
 
 
