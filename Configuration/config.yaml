@@ -1,0 +1,19 @@
+{
+	"input_path" : "/content/drive/MyDrive/Adidas/ol_cdump.json",
+	"output_path" : "/content/drive/MyDrive/Adidas/output/ol_cdump.json",
+	"spark_config": {
+		"application_name": "Open_Library_Analysis",
+		"deploy_mode": "client",
+		"num_executors": "15",
+		"executor_memory": "40g",
+		"driver_memory": "25g",
+		"executor_cores": "10",
+		"extra_pyspark_conf": '--conf "spark.hadoop.hive.exec.dynamic.partition=true" --conf "spark.hadoop.hive.exec.dynamic.partition.mode=nonstrict"'
+  },
+    "code": "ol_code_build.zip",
+	"driver_name": "ol_main.py",
+	"sa_keytab_file": "/content/drive/MyDrive/Adidas/file_name.keytab",
+	"service_account": "svc-acct",
+	"queue": "myQueue",
+	"principal": "svc@host.com",
+}
